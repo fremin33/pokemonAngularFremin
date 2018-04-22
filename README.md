@@ -2,8 +2,6 @@
 
 ![pokemon_logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.*
-
 ## Pokédex
 
 Le **Pokédex** est un objet technologique fictif de l'univers des pokémons : il s'agit d'une encyclopédie recensant les créatures fictives connues. Son but est d'informer les dresseurs su les caractéristiques de chaque créature.
