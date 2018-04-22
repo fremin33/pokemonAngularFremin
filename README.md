@@ -1,27 +1,69 @@
-# FreminAngular
+# Pokédex - Angular 5
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+![pokemon_logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png)
 
-## Development server
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.*
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Pokédex
 
-## Code scaffolding
+Le **Pokédex** est un objet technologique fictif de l'univers des pokémons : il s'agit d'une encyclopédie recensant les créatures fictives connues. Son but est d'informer les dresseurs su les caractéristiques de chaque créature.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Use Case
 
-## Running unit tests
+Le site récupère les informations grâce à l'API  [Pokéapi](https://pokeapi.co/) et affiche la totalité des pokemons sur la page d'accueil. L'utilisateur à la possibilité d'effectuer une recherche de son pokemon préféré. Une fois la rechercher effectué, on clique pour accéder au détail du pokemon avec les informations relatives à son type, poid ou taille.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Composants
 
-## Further help
+### SpinnerComponent
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Ce composant permet d'afficher un loader tant que le service PokemonsService et PokemonDetailService  n'on pas récupérer la totalité des informations à travers l'api.
+
+### PokemonsComponent
+
+Ce composant est celui utilisé pour la page d'accueil. C'est ici qu'on va afficher la totalité des pokemons avec une images ainsi que son numéro dans le pokedex et son nom. L'utilisateur a à disposition un formulaire pour effectuer une recherche sur un pokémon précis. En cliquant sur un des pokemons, on change de composant.
+
+### DetailPokemonComponent
+
+Ce composant affiche les caractéristiques précisent d'un pokemon. Son image, son nom, son poid, sa taille, sa vie ainsi que son type. On clique sur le formulaire pour effectuer une autre recherche.
+
+
+
+## Directives
+
+### ImgHoverDirective
+
+Cette directive s'applique au hover d'une image sur la page d'accueil. Elle permet de modifier le background de chaque image en fonction de son id (pair ou impair) et de la faire pivoter.
+
+### RedirectPokemonDirective
+
+Cette directive est utilisé dans le composant DetailPokemonComponent au niveau du formulaire. Si on clique pour effectuer une nouvelle recherche, l'utilisateur est redirigé vers le composant PokemonsComponent.
+
+
+
+## Pipes
+
+### CapitalizePipe
+
+Ce pipe est utilisé pour transformer la première lettre d'un mot en majuscule 
+
+- hello devient Hello
+
+### ImgPokemonPipe
+
+Ce pipe permet de changer la valeur de l'id d'un pokemon pour pouvoir afficher son image. 
+
+- 1 devient 001
+- 10 devient 010
+
+### FilterPokemonPipe
+
+Ce pipe est utilisé pour filtrer les pokemons à travers le formulaire de recherche. Il retoune un tableau des valeurs qui match avec les mots dans le fomulaires.
+
+
+
+
+
