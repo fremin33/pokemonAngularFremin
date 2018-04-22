@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xs-12 logo-pkm">
+        <img src="../../../assets/img/pokemon_logo.png" alt="">
+    </div>
+</div>
+<div class="input-wrapper">
+    <input [(ngModel)]="pokemonName" type="text" placeholder="Rechercher un pokemon">
+</div>
+<div *ngFor="let pokemons of pokemons$" class="main-content">
+    <ng-container *ngFor="let pokemon of pokemons.results | filterPokemon: 'name' : pokemonName">
+        <section class="gen">
+            <div>
+                <a routerLink="/pokemon/{{pokemons.results.indexOf(pokemon) + 1}}">
+                    <img data-id="{{pokemons.results.indexOf(pokemon)}}" appImgHover
+                         src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{pokemons.results.indexOf(pokemon) | imgPokemon}}.png"
+                         alt="">
+                    <p>#{{pokemons.results.indexOf(pokemon) + 1}} {{ pokemon.name }} </p>
+                </a>
+            </div>
+        </section>
+    </ng-container>
+</div>

@@ -1,0 +1,330 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,500);
+
+::ng-deep body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #58BAE8, #4EDE95);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: white;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    padding-top: 35px;
+    border-radius: 5px;
+    min-width: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.card:before {
+    content: '';
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    left: 10%;
+    top: 0;
+    background-color: transparent;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: rotateX(70deg);
+    transform: rotateX(70deg);
+    box-shadow: 0 2em 2em 1em rgba(0, 0, 0, 0.1), 0 2em 4em 1em rgba(0, 0, 0, 0.1), 0 2em 4em 0.5em rgba(0, 0, 0, 0.1), 0 2em 12em 3em rgba(254, 254, 254, 0.25);
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+
+.pokemon {
+    height: 170px;
+    width: 170px;
+    background-color: transparent;
+    position: absolute;
+    top: -123px;
+    left: 85px;
+}
+
+.pokemon img {
+    width: 100%;
+    height: auto;
+}
+
+.cparch {
+    height: 175px;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    position: relative;
+}
+
+.cparch i.fa.fa-star-o {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.cparch i.fa.fa-star-o:hover {
+    color: #FFC107;
+}
+
+.cparch .cp {
+    font-size: 0.6em;
+}
+
+.cparch .cp span {
+    font-size: 1.6em;
+}
+
+.cparch .arch {
+    content: '';
+    display: block;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: 0px auto;
+    top: 0px;
+    z-index: -1;
+    border-radius: 50%;
+    border-left: 2px solid #fff;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.info {
+    text-align: center;
+}
+
+.name {
+    font-size: 2em;
+    color: #0b654f;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.name:focus, .name:visited {
+    outline: 0;
+}
+
+.name i {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+}
+
+.hp {
+    font-size: 14px;
+    color: #2F2F2F;
+}
+
+.hp:before {
+    display: block;
+    content: '';
+    width: 170px;
+    height: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #6AEDB6, #6AEDB6);
+    margin-bottom: 4px;
+}
+
+.stats {
+    width: 90%;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.stats .data {
+    color: #4D7073;
+    font-weight: 600;
+}
+
+.stats .data.mid {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding: 0px 15px;
+    border-color: #E8E8E8;
+}
+
+.stats .type, .stats .kg, .stats .height {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats .type span.smallstat, .stats .kg span.smallstat, .stats .height span.smallstat {
+    font-size: 75%;
+}
+
+.stats small {
+    font-size: 60%;
+    color: grey;
+}
+
+.lower_card_data {
+    width: 90%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.lower_card_data .item.candy {
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(to right, #FFB677, #BD9457);
+    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    margin: 6px;
+}
+
+.lower_card_data .candy, .lower_card_data .stardust {
+    text-align: center;
+    font-size: 18px;
+    color: #4D7073;
+}
+
+.lower_card_data .candy small, .lower_card_data .stardust small {
+    font-size: 50%;
+    color: grey;
+}
+
+.lower_card_data .linegrey {
+    margin-top: 10px;
+    background-color: #E8F0E1;
+    color: #396064;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.btn {
+    position: relative;
+}
+
+.btn.pkmn {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 8px 19px;
+    background: linear-gradient(to right, #a2db95, #24ccaa);
+    border-radius: 29px;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
+    border: 1px solid transparent;
+    background-size: 105%;
+    background-position: -1px;
+    min-width: 128px;
+    text-align: center;
+}
+
+.btn.pkmn.inactive {
+    background: linear-gradient(to right, #BFDED8, #CCDFE5);
+    color: rgba(219, 255, 217, 0.9);
+}
+
+.btn.pkmn.inactive:hover {
+    background: linear-gradient(to right, #BFDED8, #CCDFE5);
+    color: rgba(219, 255, 217, 0.9);
+}
+
+.btn.pkmn:hover {
+    background: linear-gradient(to right, #B7F3E7, #D4F5CD);
+    color: #0B654F;
+}
+
+.flex_c {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_r {
+    display: flex;
+    flex-direction: row;
+}
+
+.spacearound {
+    width: 80%;
+    justify-content: space-around;
+    margin: 0px auto;
+}
+
+.ai {
+    align-items: center;
+}
+
+.stardust {
+    background-image: url("http://www.serebii.net/pokemongo/stardust.png");
+    background-repeat: no-repeat;
+    background-size: auto 19px;
+    background-position-y: 3px;
+    padding-left: 7px;
+}
+
+.t {
+    transition: all 0.2s ease-in-out;
+}
+
+.card_content {
+    animation: outofnowhere 1s ease-in-out;
+}
+
+@keyframes outofnowhere {
+    0% {
+        transform: translateY(-130%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-10%);
+    }
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+::ng-deep input {
+    justify-content: center;
+    border: none;
+    border-bottom: 3px solid white;
+    background-color: transparent;
+    font-size: 32px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    width: 388px;
+}
+
+.logo-pkm img {
+    width: 50%;
+    height: auto;
+    min-width: 330px;
+}
+
+.logo-pkm {
+    text-align: center;
+}
+
+::ng-deep input::placeholder {
+    color: white;
+}

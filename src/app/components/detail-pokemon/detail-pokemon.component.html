@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-xs-12 logo-pkm">
+        <img src="../../../assets/img/pokemon_logo.png" alt="">
+    </div>
+</div>
+<div class="input-wrapper">
+    <input [(ngModel)]="pokemonName" type="text" placeholder="Rechercher un pokemon" appRedirectPokemon>
+</div>
+<div class="card_content" *ngFor="let pokemon of pokemonType">
+    <div class="cparch">
+        <div class="star"><i class="fa fa-star-o t"></i></div>
+        <div class="cp">CP<span>{{pokemon.height}}</span></div>
+        <div class="arch"></div>
+    </div>
+    <div class="card">
+        <div class="pokemon"><img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{pokemon.id - 1 | imgPokemon}}.png"/>
+        </div>
+        <div class="info">
+            <div class="name">
+                {{pokemon.name | capitalize}} <i class="fa fa-pencil"></i>
+            </div>
+            <div class="hp"> HP {{pokemon.hp}}/{{pokemon.hp}}</div>
+        </div>
+        <div class="stats flex_r">
+            <div class="type">
+                <div class="data">{{pokemon.type | capitalize}}</div>
+                <small>Type</small>
+            </div>
+            <div class="kg">
+                <div class="data mid">{{pokemon.weight}} <span class="smallstat">kg</span></div>
+                <small> Weight</small>
+            </div>
+            <div class="height">
+                <div class="data">
+                    {{pokemon.height}} <span class="smallstat">m</span>
+                </div>
+                <small> Height</small>
+            </div>
+        </div>
+        <div class="lower_card_data">
+            <div class="flex_r spacearound">
+                <div class="stardust flex_c"><span class="item stardust"></span> 2000
+                    <small>STARDUST</small>
+                </div>
+                <div class="candy flex_c">
+                    <div class="upcandy flex_r ai"><span class="item candy"></span> 3</div>
+                    <small>PKMN CANDY</small>
+                </div>
+            </div>
+            <div class="linegrey flex_r">
+                <div class="btn pkmn t">
+                    Power up
+                </div>
+                <div class="flex_r spacearound ai">
+                    <div class="smalldust">
+                        <span class="item stardust"></span> 200
+                    </div>
+                    <div class="smallcandy flex_r ai"><span class="item candy"></span> 3</div>
+                </div>
+            </div>
+            <div class="linegrey flex_r">
+                <div class="btn pkmn inactive t">Evolve</div>
+                <div class="flex_r spacearound">
+                    <div style="margin-right: -90px;" class="smallcandy flex_r ai"><span class="item candy"> </span>0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

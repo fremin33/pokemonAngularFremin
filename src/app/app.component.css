@@ -1,0 +1,15 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+::ng-deep body {
+    background: linear-gradient(to right, #58BAE8, #4EDE95);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
