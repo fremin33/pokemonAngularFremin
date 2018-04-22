@@ -64,8 +64,3 @@ Ce pipe permet de changer la valeur de l'id d'un pokemon pour pouvoir afficher s
 ### FilterPokemonPipe
 
 Ce pipe est utilisé pour filtrer les pokemons à travers le formulaire de recherche. Il retoune un tableau des valeurs qui match avec les mots dans le fomulaire.
-
-
-
-
-
