@@ -2,6 +2,10 @@
 
 ![pokemon_logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png)
 
+Le site est disponible à l'url suivante : 
+
+http://lpcm2016.univ-lr.fr/ffremin/freminAngularPokemon/pokemon
+
 ## Pokédex
 
 Le **Pokédex** est un objet technologique fictif de l'univers des pokémons : il s'agit d'une encyclopédie recensant les créatures fictives connues. Son but est d'informer les dresseurs su les caractéristiques de chaque créature.
