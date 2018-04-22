@@ -14,7 +14,7 @@ Le **Pokédex** est un objet technologique fictif de l'univers des pokémons : i
 
 ## Use Case
 
-Le site récupère les informations grâce à l'API  [Pokéapi](https://pokeapi.co/) et affiche la totalité des pokemons sur la page d'accueil. L'utilisateur à la possibilité d'effectuer une recherche de son pokemon préféré. Une fois la rechercher effectué, on clique pour accéder au détail du pokemon avec les informations relatives à son type, poid ou taille.
+Le site récupère les informations grâce à l'API  [Pokéapi](https://pokeapi.co/) et affiche la totalité des pokemons sur la page d'accueil. L'utilisateur à la possibilité d'effectuer une recherche de son pokemon préféré. Une fois la rechercher effectué, on clique pour accéder au détail du pokemon avec les informations relatives à son type, poids ou taille.
 
 
 
@@ -22,15 +22,15 @@ Le site récupère les informations grâce à l'API  [Pokéapi](https://pokeapi.
 
 ### SpinnerComponent
 
-Ce composant permet d'afficher un loader tant que le service PokemonsService et PokemonDetailService  n'on pas récupérer la totalité des informations à travers l'api.
+Ce composant permet d'afficher un loader tant que le service PokemonsService et PokemonDetailService  n'ont pas récupéré la totalité des informations à travers l'api.
 
 ### PokemonsComponent
 
-Ce composant est celui utilisé pour la page d'accueil. C'est ici qu'on va afficher la totalité des pokemons avec une images ainsi que son numéro dans le pokedex et son nom. L'utilisateur a à disposition un formulaire pour effectuer une recherche sur un pokémon précis. En cliquant sur un des pokemons, on change de composant.
+Ce composant est celui utilisé pour la page d'accueil. C'est ici qu'on va afficher la totalité des pokemons avec une image ainsi que son numéro dans le pokedex et son nom. L'utilisateur a à disposition un formulaire pour effectuer une recherche sur un pokémon précis. En cliquant sur un des pokemons, on change de composant.
 
 ### DetailPokemonComponent
 
-Ce composant affiche les caractéristiques précisent d'un pokemon. Son image, son nom, son poid, sa taille, sa vie ainsi que son type. On clique sur le formulaire pour effectuer une autre recherche.
+Ce composant affiche les caractéristiques précisent d'un pokemon. Son image, son nom, son poids, sa taille, sa vie ainsi que son type. On clique sur le formulaire pour effectuer une autre recherche.
 
 
 
@@ -42,7 +42,7 @@ Cette directive s'applique au hover d'une image sur la page d'accueil. Elle perm
 
 ### RedirectPokemonDirective
 
-Cette directive est utilisé dans le composant DetailPokemonComponent au niveau du formulaire. Si on clique pour effectuer une nouvelle recherche, l'utilisateur est redirigé vers le composant PokemonsComponent.
+Cette directive est utilisée dans le composant DetailPokemonComponent au niveau du formulaire. Si on clique pour effectuer une nouvelle recherche, l'utilisateur est redirigé vers le composant PokemonsComponent.
 
 
 
@@ -63,7 +63,7 @@ Ce pipe permet de changer la valeur de l'id d'un pokemon pour pouvoir afficher s
 
 ### FilterPokemonPipe
 
-Ce pipe est utilisé pour filtrer les pokemons à travers le formulaire de recherche. Il retoune un tableau des valeurs qui match avec les mots dans le fomulaires.
+Ce pipe est utilisé pour filtrer les pokemons à travers le formulaire de recherche. Il retoune un tableau des valeurs qui match avec les mots dans le fomulaire.
 
 
 
