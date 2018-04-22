@@ -4,7 +4,7 @@
 
 Le site est disponible à l'url suivante : 
 
-http://lpcm2016.univ-lr.fr/ffremin/freminAngularPokemon/pokemon
+http://lpcm2016.univ-lr.fr/ffremin/freminAngularPokemon
 
 ## Pokédex
 
