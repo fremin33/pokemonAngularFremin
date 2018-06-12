@@ -5,7 +5,7 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class PokemonDetailService {
 
-    url = 'http://pokeapi.co/api/v2/pokemon/';
+    url = 'https://pokeapi.co/api/v2/pokemon/';
 
     constructor(private http: HttpClient) {
     }
